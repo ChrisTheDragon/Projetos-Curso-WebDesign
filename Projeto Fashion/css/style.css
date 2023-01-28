@@ -97,3 +97,36 @@ main {
     color: gray;    
 }
 
+#about {
+    background-color: blue;
+    color: white;
+    background-image: url(../imagens/bg_detalhe.png);
+    height: 400px;
+}
+
+#about h2 {
+    font-size: 40px;
+    font-weight: 100;
+    padding: 60px 25px 25px 80px;
+}
+
+#about p {
+    padding: 0px 500px 0px 80px;
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    background-color: rgb(2, 2, 75);
+}
+
+footer p {
+    color: white;
+    padding-top: 13px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
