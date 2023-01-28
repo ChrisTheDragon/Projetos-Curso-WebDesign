@@ -114,6 +114,20 @@ main {
     padding: 0px 500px 0px 80px;
 }
 
+#contact {
+    align-items: center;
+}
+
+#contact h2 {
+    color: blue;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+#contact iframe {
+    text-align: center;
+    margin: 10px;
+}
 footer {
     height: 50px;
     text-align: center;
