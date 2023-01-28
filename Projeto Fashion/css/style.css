@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(2, 2, 75);
+    color: gray;
+    height: 45px;
+    background-image: url(../imagens/logo.png);
+    background-repeat: no-repeat;
+    background-position: 45px;
+}
+
+header ul {
+    list-style: none;
+    float: right;
+    margin: 10px 50px;
+}
+
+header ul li{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+header ul li a:hover {
+    color: white;
+}
+
+#imagem {
+    height: 480px;
+    background-image: url(../imagens/topo.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: black;
+}
+
+main {
+    max-width: 1000px;
+    min-width: none;
+    margin: auto;
+}
+
+#portifolio {
+    margin: 50px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#portifolio h1 {
+    font-size: 35px;
+    margin: 25px;
+}
+
+#galeria {
+    padding: 10px;
+    overflow: auto;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 32%;
+    float: left;
+}
+
+.card1, .card2 {
+    margin-right: 2%;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.nome {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 15px;
+}
+
+.subnome {
+    font-size: 13px;
+    text-align: center;
+    color: gray;    
+}
+
