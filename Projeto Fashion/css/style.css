@@ -7,7 +7,7 @@
 }
 
 header {
-    background-color: rgb(2, 2, 75);
+    background-color: #162028;
     color: gray;
     height: 45px;
     background-image: url(../imagens/logo.png);
@@ -55,11 +55,12 @@ main {
 #portifolio {
     margin: 50px;
     text-align: center;
-    line-height: 30px;
+    line-height: 2;
 }
 
 #portifolio h1 {
-    font-size: 35px;
+    font-size: 36px;
+    color: #162028;
     margin: 25px;
 }
 
@@ -84,9 +85,10 @@ main {
 }
 
 .nome {
-    font-size: 13px;
+    font-size: 16px;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    font-weight: bold;
+    letter-spacing: 4px;
     text-align: center;
     margin: 15px;
 }
@@ -98,20 +100,27 @@ main {
 }
 
 #about {
-    background-color: blue;
+    background-color: #003d52;
     color: white;
     background-image: url(../imagens/bg_detalhe.png);
-    height: 400px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    /* height: 400px; */
+    padding: 100px;
 }
 
 #about h2 {
-    font-size: 40px;
-    font-weight: 100;
-    padding: 60px 25px 25px 80px;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    /* padding: 60px 25px 25px 80px; */
 }
 
 #about p {
-    padding: 0px 500px 0px 80px;
+    line-height: 1.5;
+    width: 70%;
+    /* padding: 0px 500px 0px 80px */;
 }
 
 #contact {
@@ -119,28 +128,36 @@ main {
 }
 
 #contact h2 {
-    color: blue;
+    color: #143f52;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26px;
     margin: 30px 0px;
 }
 
 #contact iframe {
-    text-align: center;
-    margin: 10px;
+    width: 100%;
+    height: 450px;
+    /* text-align: center;
+    margin: 10px; */
 }
+
 footer {
-    height: 50px;
+    padding: 25px;
+    font-size: 12px;
     text-align: center;
-    background-color: rgb(2, 2, 75);
+    background-color: #0b171f;
 }
 
 footer p {
-    color: white;
-    padding-top: 13px;
+    color: #6f8597;
+    letter-spacing: 5px;
+    /* padding-top: 13px; */
 }
 
 footer a {
     text-decoration: none;
     color: white;
-    font-weight: 900;
+    font-weight: bolder;
 }
