@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Exemplo de estrutura básica</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, red, blue);
+        }
+        #radius {
+            background: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border-radius: 50%;
+        }
+        #radius2 {
+            background: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border-radius: 50px 20px 0 100px;
+        }
+        #radius3 {
+            background: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border-radius: 50px 100px / 100px 50px;
+            box-shadow: 10px 20px 10px 20px  #999;
+        }
+        #radius4 {
+            background: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border-radius: 50px 100px / 100px 50px;
+            box-shadow: 30px 0 10px -20px black, 10px 10px 0 red, -5px -5px 0 10px blue;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            font-size: 50px;
+            text-align: center;
+            text-shadow: -1px 1px 0 gray, -2px 2px 0 rgb(160, 160, 160), -3px 3px 0 rgb(196, 196, 196), -4px 4px 0 rgb(235, 235, 235);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Efeitos</h1>
+
+    <div id="radius"></div>
+    <div id="radius2"></div>
+    <div id="radius3"></div>
+    <div id="radius4"></div>
+    
+</body>
+</html>
