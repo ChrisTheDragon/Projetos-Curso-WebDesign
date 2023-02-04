@@ -15,7 +15,7 @@
 </head>
 <body>
     <header class="main-header">
-        <a href="index.html" class="main-header-link">
+        <a href="index.html" class="main-header-link imagem-link">
             <img src="images/avatar.jpg" alt="texto alternativo">
         </a>
         <h1 class="main-header-title">
@@ -39,41 +39,45 @@
 
         <section class="main-content-section">
             <h3>Recent Works</h3>
-            <article class="recent-works-card">
-                <a href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt="descrção"></a>
-                <p class="recent-works-card-title">Magna sed consequat tempus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
+            <div class="row">
+                <div class="col-2">
+                    <article class="recent-works-card">
+                        <a href="images/fulls/01.jpg" class="imagem-link"><img src="images/thumbs/01.jpg" alt="descrção"></a>
+                        <p class="recent-works-card-title">Magna sed consequat tempus</p>
+                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
 
-            <article class="recent-works-card">
-                <a href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="descrção"></a>
-                <p class="recent-works-card-title">Ultricies lacinia interdum</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
-            
-            <article class="recent-works-card">
-                <a href="images/fulls/01.jpg"><img src="images/thumbs/03.jpg" alt="descrção"></a>
-                <p class="recent-works-card-title">Tortor metus commodo</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
+                    <article class="recent-works-card">
+                        <a href="images/fulls/02.jpg" class="imagem-link"><img src="images/thumbs/02.jpg" alt="descrção"></a>
+                        <p class="recent-works-card-title">Ultricies lacinia interdum</p>
+                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+                    
+                    <article class="recent-works-card">
+                        <a href="images/fulls/03.jpg" class="imagem-link"><img src="images/thumbs/03.jpg" alt="descrção"></a>
+                        <p class="recent-works-card-title">Tortor metus commodo</p>
+                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+                </div>
 
-            <article class="recent-works-card">
-                <a href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="descrção"></a>
-                <p class="recent-works-card-title">Quam neque phasellus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
-
-            <article class="recent-works-card">
-                <a href="images/fulls/05.jpg"><img src="images/thumbs/05.jpg" alt="descrção"></a>
-                <p class="recent-works-card-title">Nunc enim commodo aliquet</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
-
-            <article class="recent-works-card">
-                <a href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="descrção"></a>
-                <p class="recent-works-card-title">Risus ornare lacinia</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
+                <div class="col-2">
+                    <article class="recent-works-card">
+                        <a href="images/fulls/04.jpg" class="imagem-link"><img src="images/thumbs/04.jpg" alt="descrção"></a>
+                        <p class="recent-works-card-title">Quam neque phasellus</p>
+                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+                    <article class="recent-works-card">
+                        <a href="images/fulls/05.jpg" class="imagem-link"><img src="images/thumbs/05.jpg" alt="descrção"></a>
+                        <p class="recent-works-card-title">Nunc enim commodo aliquet</p>
+                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+                    <article class="recent-works-card">
+                        <a href="images/fulls/06.jpg" class="imagem-link"><img src="images/thumbs/06.jpg" alt="descrção"></a>
+                        <p class="recent-works-card-title">Risus ornare lacinia</p>
+                        <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+                </div>
+            </div>
             <a href="#" title="Veja Portifolio COompleto" class="button-default">Veja Portifolio Completo</a>
         </section>
 
@@ -348,8 +352,8 @@
 
                 <textarea placeholder="digite uma mensagem" id="msg"></textarea>
 
-                <input type="submit" class="button-default" value="Enviar">
-                <input type="reset" class="button-default-stroke" value="Limpar">
+                <input type="submit" class="button-default button-default-big" value="Enviar">
+                <input type="reset" class="button-default button-default-stroke button-default-big" value="Limpar">
             </form>
         </section>
 

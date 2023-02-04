@@ -21,6 +21,10 @@ p{
     margin: 0 0 2em;
 }
 
+img {
+    max-width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #787878;
     font-weight: normal;
@@ -102,12 +106,12 @@ li {
     color: #49bf9d;
 }
 
-input, label, textarea {
+input, label, textarea, select {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
 }
-input, textarea {
+input, textarea, select {
     background: #ccc;
     padding: 15px;
     border-radius: 5px;
@@ -123,6 +127,10 @@ textarea {
     height: 10em;
 }
 
+input[type="checkbox"], input[type="radio"] {
+    width: auto;
+}
+
 
 .button-default {
     background-color: #49bf9d;
@@ -133,6 +141,7 @@ textarea {
     font-size: .8em;
     display: inline-block;
     width: auto;
+    text-align: center;
 }
 .button-default-stroke {
     background-color: white;
@@ -147,6 +156,10 @@ textarea {
 }
 .button-default-big {
     font-size: 1em;
+}
+
+.imagem-link {
+    border: none;
 }
 
 .table {
@@ -215,6 +228,16 @@ textarea {
     margin-left: 35%;
     padding: 124px 54px 72px;
     box-sizing: border-box;
+}
+
+.main-header-link img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recent-works-card img {
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 /* Grid */
