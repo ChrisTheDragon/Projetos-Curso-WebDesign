@@ -5,20 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Strata</title>
+    <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <!-- <link rel="stylesheet" href="style/fontawesome-free-6.2.1-web/css/all.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <a href="index.html" class="main-header-link">
             <img src="images/avatar.jpg" alt="texto alternativo">
         </a>
-        <h1>
+        <h1 class="main-header-title">
             Trabalhos e groselha de <br>
             <strong>Christian J. C. Marinho</strong> <br>
             um zé qualuqer <br>
-            Retirado de <a href="http://html5up.net">html5up.net</a><br>
+            Retirado de <a href="http://html5up.net" class="main-header-link" target="
+            ">html5up.net</a><br>
         </h1>
     </header>
 
@@ -33,6 +38,7 @@
         </section>
 
         <section class="main-content-section">
+            <h3>Recent Works</h3>
             <article class="recent-works-card">
                 <a href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt="descrção"></a>
                 <p class="recent-works-card-title">Magna sed consequat tempus</p>
@@ -68,7 +74,7 @@
                 <p class="recent-works-card-title">Risus ornare lacinia</p>
                 <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
             </article>
-            <a href="#" title="Veja Portifolio COompleto" class="button-defaut">Veja Portifolio Completo</a>
+            <a href="#" title="Veja Portifolio COompleto" class="button-default">Veja Portifolio Completo</a>
         </section>
 
         <section class="main-content-section">
@@ -114,7 +120,7 @@
             </p>
 
             <blockquote cite="http://developer.morzilla.org">
-                <p>Esta é uma citação tirada da Mozilla Developer Center.</p>
+                Esta é uma citação tirada da Mozilla Developer Center.
             </blockquote>
 
             <p>
@@ -132,53 +138,64 @@
             </pre>
 
             <h4>Listas</h4>
-            <h5>Não ordenadas</h5>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
+            <div class="row">
+                <div class="col-2">
+                    <h5>Não ordenadas</h5>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                    <h5>Ordenadas</h5>
+                    <ol>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ol>
+                </div>
 
-            <h5>Ordenadas</h5>
-            <ol>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ol>
-
-            <h5>Alternate</h5>
-            <ul class="ul-alternate">
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
-
-            <h5>Icons</h5>
-            <ul>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-facebook"></i></li>
-            </ul>
+                <div class="col-2">
+                    <h5>Alternate</h5>
+                    <ul class="ul-alternate">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                    <h5>Icons</h5>
+                    <ul class="ul-icons">
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-github"></i></li>
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                    </ul>
+                </div>
+            </div>
 
             <h5>Actions</h5>
-            <p>
-                <a href="#" class="button-default">Default</a>
-                <a href="#" class="button-default button-default-stroke">Default</a>
-            </p>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <a href="#" class="button-default">Default</a>
+                        <a href="#" class="button-default button-default-stroke">Default</a>
+                    </p>
+                    <p>
+                        <a href="#" class="button-default button-default-small">Default</a>
+                        <a href="#" class="button-default button-default-small button-default-stroke">Default</a>
+                    </p>
+                </div>
 
-            <p>
-                <a href="#" class="button-default button-default-small">Default</a>
-                <a href="#" class="button-default button-default-small button-default-stroke">Default</a>
-            </p>
-
-            <p>
-                <a href="#" class="button-default button-default-full">Default</a>
-                <a href="#" class="button-default button-default-full button-default-stroke">Default</a>
-            </p>
-
-            <p>
-                <a href="#" class="button-default button-default-full button-default-small">Default</a>
-                <a href="#" class="button-default button-default-full button-default-small button-default-stroke">Default</a>
-            </p>
+                <div class="col-2">
+                    <p>
+                        <a href="#" class="button-default button-default-full">Default</a>
+                        <a href="#" class="button-default button-default-full button-default-stroke">Default</a>
+                    </p>
+                    <p>
+                        <a href="#" class="button-default button-default-full button-default-small">Default</a>
+                        <a href="#" class="button-default button-default-full button-default-small button-default-stroke">Default</a>
+                    </p>
+                </div>
+            </div>
 
             <h4>Table</h4>
             <h5>Default</h5>
