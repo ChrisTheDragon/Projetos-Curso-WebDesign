@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+    font-family: sans-serif;
+}
+
+label {
+    margin-right: 25px;
+}
+
+label span {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(190, 190, 190);
+    display: inline-block;
+    border-radius: 15px;
+}
+
+label span::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #eee;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all .2s ease-in-out;
+}
+
+label input:checked + span::before {
+    transform: translateX(30px);
+    background-color: red;
+}
+
+label input:focus + span {
+    outline: 2px solid red;
+    box-sizing: border-box;
+}
+
+input {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
