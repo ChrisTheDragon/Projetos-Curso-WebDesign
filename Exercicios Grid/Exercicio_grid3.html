@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gridContainer {
+            width: 90%;
+            background-color: #ccc;
+            margin: 30px auto;
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        /* GRID */
+        .gridContainer {
+            display: grid;
+            grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end];
+            grid-template-rows: [header-start] 100px [header-end nav-start] 50px [nav-end main-start] 1fr [main-start footer-start] 50px [footer-end];
+            gap: 20px;
+
+            grid-template-areas: 
+                "header header  header"
+                "nav    nav     nav"
+                "main   main    aside"
+                "footer footer  footer"
+            ;
+        }
+
+        .header {
+            grid-column: col1-start / col3-end;
+            grid-row: header;
+        }
+        .nav {
+            grid-column: col1-start / col3-end;
+            grid-row: nav;
+        }
+        .aside {
+            grid-row: main-start / footer-end ;
+            grid-column: col3-start / col3-end;
+        }
+        .main {
+            grid-column: col1-start / col2-end;
+            grid-row: main;
+            min-height: 200px;
+        }
+        .footer {
+            grid-column: col1-start / col3-end;
+            grid-row: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Grid Layout</h2>
+
+    <div class="gridContainer">
+        <header class="header gridItem">header</header>
+        <nav class="nav gridItem">nav</nav>
+        <aside class="aside gridItem">aside</aside>
+        <main class="main gridItem">main</main>
+        <footer class="footer gridItem">footer</footer>
+    </div>
+    
+</body>
+</html>
