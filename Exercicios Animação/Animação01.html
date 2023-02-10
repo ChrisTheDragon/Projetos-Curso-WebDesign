@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes anda {
+            0% {
+                transform: translateX(0);
+                background-color: yellow;
+            }
+
+            25%, 75% {
+                height: 80px;
+            }
+
+            50% {
+                background-color: orange;
+            }
+
+            80% {
+                background-color: green;
+            }
+
+            100% {
+                transform: translateX(400px);
+                background-color: blue;
+            }
+        }
+
+        #anima-time div {
+            width: 80px;
+            height: 50px;
+            border: 2px solid red;
+        }
+
+        #anima-time div:nth-child(1){
+            animation: anda 2s ease-in-out;
+        }
+        #anima-time div:nth-child(2){
+            animation: anda 2s ease-in-out infinite alternate;
+            /* animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out; */
+        }
+        #anima-time div:nth-child(3){
+            animation: anda 2s ease-in-out 1s infinite alternate;
+            /* animation-delay: 1s; */
+        }
+        #anima-time div:nth-child(4){
+            background-color: red;
+            animation: anda 2s ease-in-out 1s 2 alternate both;
+            /* animation-fill-mode: both; */
+        }
+        #anima-time div:nth-child(5){
+            background-color: red;
+            animation: anda 2s ease-in-out infinite alternate both;
+            animation-play-state: running;
+        }
+        #anima-time div:nth-child(5):hover{
+            animation-play-state: paused;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Animação</h2>
+    <p>animation: name duration timing-function delay iteration-count direction fill-mode play-state;</p>
+    <div id="anima-time">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    
+</body>
+</html>
