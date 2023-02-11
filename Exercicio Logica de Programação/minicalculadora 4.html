@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calc</title>
+</head>
+<body>
+    <h1>Lógica de programação</h1>
+    <div class="button">
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button  onclick="iniciarCalculo('/')">/</button>
+    </div>
+    <div id="resultado">
+        0
+    </div>
+
+    <script>
+
+        function iniciarCalculo(sinal) {
+            var n1 = parseFloat(document.querySelector('#resultado').textContent);
+            var n2 = parseFloat(prompt('digite outro numero'));
+
+            try{
+                var menssagem = calcular(sinal, n1, n2);
+            } catch (e) {
+                console.log(e);
+                return;
+            }
+
+            escrever(menssagem);
+        }
+
+        function escrever(msg) {
+            var resultado = document.querySelector('#resultado');
+            resultado.innerHTML = msg;
+        }
+
+        function calcular(sinal, n1, n2){
+
+            if(sinal !== '+' && sinal !== '-' && sinal !== '*' && sinal !== '/'){
+                throw new Error('digite um simbolo válido!');
+            }
+
+            if (isNaN(n1) || isNaN(n2)) {
+                throw new Error('Não é um numero!!');
+            }
+            
+            var numCalculado = null;
+            
+            if (sinal === '+') {
+                numCalculado = n1 + n2;
+            } else if (sinal === '-') {
+                numCalculado = n1 - n2;
+            } else if (sinal === '*') {
+                numCalculado = n1 * n2;
+            } else {
+                numCalculado = n1 / n2;
+            }
+
+            return numCalculado;
+        }
+    </script>
+</body>
+</html>
