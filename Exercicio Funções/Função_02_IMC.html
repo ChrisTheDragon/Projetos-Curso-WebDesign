@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo do IMC: </h1>
+    
+    <script>
+        (function() {
+            'use strict';
+
+            function imc (alt, pes) {
+                if (alt === 0 || alt === undefined) {
+                    return 0;
+                } else {
+                    return pes / (alt * alt);
+                }
+            }
+
+            function classImc(imc) {
+                if (imc <= 16.9) {
+                    return 'muito abaixo do peso';
+                } else if (imc <= 18.4) {
+                    return 'abaixo do peso';
+                } else if (imc <= 24.9) {
+                    return 'peso normal;'
+                } else if (imc <= 29.9) {
+                    return 'acima do peso';
+                } else if (imc <= 34.9) {
+                    return 'obesidade grau I'
+                } else if (imc <= 40) {
+                    return 'obesidade grau II'
+                } else {
+                    return 'obesidade grau III'
+                }
+            }
+
+            var clas = classImc(imc(1.75, 65));
+
+            console.log('classificação IMC: ', clas);
+        }) ()
+
+
+
+    </script>
+</body>
+</html>

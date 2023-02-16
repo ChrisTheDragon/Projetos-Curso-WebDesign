@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Curso Javascript Completo</h1>
+
+    <script>
+        (function() {
+            function calcularMedia() {
+                var total = 0;
+                var qtd = arguments.length;
+
+                for (var i = 0; i < qtd; i++) {
+                    total += arguments[i];
+                }
+
+                return total / qtd;
+            }
+
+            var media1 = calcularMedia(2, 3);
+            var media2 = calcularMedia(4, 0, 10, 10);
+
+            console.log('media1: ', media1);
+            console.log('media2: ', media2);
+        }) ()
+
+        
+
+    </script>
+</body>
+</html>
