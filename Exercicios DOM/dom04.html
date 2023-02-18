@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Curso Jvascript completo</h1>
+
+    <input type="text" name="" id="txtNome" value="">
+    <button onclick="escreve()">Clicar</button>
+    <div id="msg"></div>
+    
+    <script>
+        function escreve() {
+            var nome = document.querySelector('#txtNome').value
+            document.querySelector('#msg').innerHTML = 'Bem-vindo, <b>' + nome + '</b>';
+        }
+
+        /* (function(){
+            'use strict';
+            var txtNome = document.querySelector('#txtNome')
+            var nome = txtNome.value;
+            document.querySelector('#msg').innerHTML = 'Bem-vindo, <b>' + nome + '</b>';
+        })() */
+    </script>
+</body>
+</html>

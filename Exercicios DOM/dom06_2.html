@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="../beluga.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso de Javascript</h1>
+    </div>
+
+    <section>
+        <div class="container">
+            <h2>Média dos alunos</h2>
+            <table class="table js-tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Nota 4</th>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="aluno">
+                        <td class="aluno-nome">Norman</td>
+                        <td class="aluno-n1">10</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">9</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="aluno-nome">Ray</td>
+                        <td class="aluno-n1">5</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">6.5</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="aluno-nome">Emma</td>
+                        <td class="aluno-n1">8</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">7</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="aluno-nome">Don</td>
+                        <td class="aluno-n1">6.5</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">10</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="aluno-nome">Gilda</td>
+                        <td class="aluno-n1">10</td>
+                        <td class="aluno-n2">9.5</td>
+                        <td class="aluno-n3">10</td>
+                        <td class="aluno-n4">8.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    
+    <script>
+        (function() {
+
+            'use strict';
+            var trs = document.querySelectorAll('.js-tabela tbody .aluno');
+            var x = 0;
+
+            while(trs[x]) {
+
+                var linhaAluno = trs[x];
+                var tds = linhaAluno.querySelectorAll('td');
+                var notas = recuperarNumerosDeColunas(tds);
+                var media = calcularMedia.apply(this, notas);
+
+                linhaAluno.querySelector('.aluno-m').textContent = media;
+                x++;
+
+            }
+
+
+            function recuperarNumerosDeColunas(tds) {
+
+                var x = 0;
+                var arr = [];
+
+                while(tds[x]) {
+                    if (!isNaN(tds[x].textContent) && tds[x].textContent !== '') {
+                        arr.push(parseFloat(tds[x].textContent));
+                    }
+                    x++;
+                }
+
+                return arr;
+
+            }
+
+        })()
+    </script>
+</body>
+</html>
