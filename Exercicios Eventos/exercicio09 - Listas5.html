@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-theme.css">
+    <style>
+        .done {
+            text-decoration: line-through;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+
+        <div>
+            <input type="text" id="add">
+            <button id="btn">Adicionar</button>
+            
+            <ul id="lista">
+                <li>Tarefa 1</li>
+                <li>Tarefa 2</li>
+                <li>Tarefa 3</li>
+            </ul>
+
+        </div>
+
+    </div>
+    
+    <script>
+        (function() {
+            'use strict';
+
+            var $lista = document.getElementById('lista');
+            var $lis = $lista.querySelectorAll('li');
+            var $add = document.getElementById('add');
+            var $btn = document.getElementById('btn');
+
+            $btn.addEventListener('click', addTask);
+            $add.addEventListener('keyup', function(e){
+                if(e.keyCode == 13) {
+                    addTask();
+                }
+            })
+
+            $lista.addEventListener('click', function(e){
+                if(e.target.nodeName === 'LI') {
+                    toogleDone(e.target);
+                }
+            });
+
+            function addTask(){
+                                
+                var li = document.createElement('li');
+                var text = document.createTextNode($add.value);
+
+                li.appendChild(text);
+
+                $lista.appendChild(li);
+
+                $add.value = '';
+                $add.focus();
+            }
+
+            function toogleDone(li) {
+                li.classList.toggle('done');
+            }
+        }) ()
+    </script>
+</body>
+</html>
