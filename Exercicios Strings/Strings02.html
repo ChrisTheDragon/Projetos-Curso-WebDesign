@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        (function(){
+            window.addEventListener('load', init);
+
+            function init(){
+                var $paragrafo = document.querySelectorAll('p');
+
+                for (var i = 0; i < $paragrafo.length; i++) {
+                    $paragrafo[i].innerHTML = formatarParagrafo($paragrafo[i].innerHTML);
+                    /* if ($paragrafo[i].textContent.length > 200) {
+                        var texto = $paragrafo[i].textContent.slice(0, 200);
+                        $paragrafo[i].innerText = texto + '...';
+                    } */
+                }
+
+                function formatarParagrafo(texto) {
+                    var numeroMaximoCaracteres = 200;
+                    if(texto.length <= numeroMaximoCaracteres) return texto;
+                    
+                    var subTexto = texto.slice(0, numeroMaximoCaracteres);
+                    return subTexto + '...';
+                }
+            }
+        })()
+        
+    </script>
+
+</head>
+<body>
+
+    <h1>Curso de JavaScript</h1>
+    <p>Lorem, ipsum dolor<b> sit amet consectetur adipisicing elit. Ut placeat quasi quia, libero quas numquam error sapiente sed unde odio, cum repellat? Non, sit iste. Alias dolorum quibusdam possimus</b> ducimus.
+    Error, adipisci vel veritatis iusto facilis beatae magni repudiandae qui officiis hic tempora sunt ut vero placeat accusantium reprehenderit consequuntur quos porro harum! Inventore neque at voluptate aliquid dolorem. Natus.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum ut suscipit eos magnam! Libero recusandae alias possimus eveniet sint at quas reiciendis, consequuntur porro assumenda animi, facere maxime dolore?
+    Distinctio quasi, aut mollitia voluptas perspiciatis officia quidem laboriosam obcaecati omnis, veritatis, error itaque ratione incidunt non voluptatem doloremque asperiores fugit. Suscipit autem ipsum sint laborum, ullam non minus labore!
+    Libero minus dolor sequi! Quo optio consequatur voluptatibus suscipit, quidem, tempore voluptatum amet saepe quis blanditiis fugiat culpa, dolorem laborum porro dolore commodi ex illum incidunt placeat! Nemo, quo sed.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias assumenda, rem magnam corporis aut illum consequatur ducimus accusamus laboriosam ipsum cupiditate excepturi in accusantium minus veritatis, pariatur et a dolorem?
+    Culpa, explicabo quo. Mollitia et voluptatum vel at aspernatur ab perferendis. Recusandae obcaecati eius iure asperiores, ipsam neque voluptas non consequatur enim quis minima commodi dolorum at ab officiis temporibus.
+    Nobis nihil, asperiores, unde minima expedita laboriosam commodi, omnis id aliquam qui soluta. Ducimus culpa voluptates eius dignissimos aperiam a doloremque quis amet, in, odio cum rem possimus assumenda deleniti!
+    Repudiandae cumque adipisci optio commodi, veritatis quam, doloremque, voluptas fugit tenetur est aliquid ratione ipsa? Ipsa dolorem id, deserunt vitae, quae eligendi consequatur eaque hic molestiae, temporibus mollitia vel? Deleniti!</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, dolorum. Natus, officiis, consequuntur quisquam explicabo esse quia harum facilis sint modi at corrupti quos nulla id ducimus. Harum, inventore ad.
+    Vitae dolore voluptatum, omnis sequi repellat recusandae iusto delectus praesentium fuga ex nulla eligendi odit aperiam dolor officia distinctio. Cumque dolores, reprehenderit odio aliquid totam exercitationem nam alias quidem labore?
+    Dicta placeat quis expedita debitis eius tenetur harum mollitia vitae voluptas magni doloribus, eum sit iusto excepturi necessitatibus quaerat modi magnam deleniti voluptate quam illo consectetur assumenda in! Dicta, ad!
+    Atque officia mollitia unde laboriosam commodi ea eum odit ipsum. Maxime numquam officiis adipisci dolores incidunt ducimus aliquam voluptate, inventore molestias nostrum dolorum rerum, minima nobis vero dicta non architecto.
+    Perferendis vitae consequuntur odio. Iusto nulla et, in iste aliquid ducimus nesciunt alias delectus molestiae, quo possimus enim, quas dolorem expedita aspernatur mollitia necessitatibus quod a blanditiis at fugit debitis!</p>
+
+    
+    
+</body>
+</html>
