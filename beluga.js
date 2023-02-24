@@ -8,5 +8,13 @@ function calcularMedia() {
         x++;
     }
 
-    return total / qtd;
+    return (total / qtd).toFixed(2);
+}
+
+function sortear (n) {
+    var _n = n || 1;
+    var nSorteado = Math.random();
+    nSorteado = Math.floor(nSorteado * _n);
+
+    return nSorteado;
 }

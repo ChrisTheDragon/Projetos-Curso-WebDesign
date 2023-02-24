@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Logica de Programação com Javascript</h1>
+
+    <script>
+        var arr = ['1',2,3,4,5, '10', 20, '30'];
+
+        var soNumeros = arr.every( function (el, indice, obj ) {
+            return typeof el === 'number';
+        });
+        console.log(soNumeros);
+
+        var aoMenosUmNumero = arr.some( function (el, indice, obj ) {
+            return typeof el === 'number';
+        });
+        console.log(aoMenosUmNumero);
+
+        var numeros = arr.filter(function (el, i, arr) {
+            return typeof el === 'number';
+        });
+        console.log(numeros);
+
+        arr.forEach(function (el, i, arr) {
+            console.log('el:', el, ' | i:', i, ' | i - ', arr.toString());
+        });
+
+        var posicaoStr1 = arr.indexOf('hhhk');
+        console.log(posicaoStr1);
+
+        console.log(numeros);
+        numeros = numeros.map(function(el, i, arr) {
+            return el * i;
+        })
+        console.log(numeros);
+
+        var arr2 = arr.concat(numeros, 'ola', 200, 'oi');
+        console.log(arr2);
+
+        var str = arr2.join(' -- ');
+        console.log(str);
+
+        arr.push('novo', 'item');
+        console.log(arr);
+
+        var ultimoItem = arr.pop();
+        console.log(ultimoItem);
+        console.log(arr);
+
+        var primeiroItem = arr.shift();
+        console.log(primeiroItem);
+        console.log(arr);
+
+        arr.unshift(true, false, 'unshift');
+        console.log(arr);
+
+        numeros.shift();
+        var somaDeArray = numeros.reduce(function (anterior, atual, indice) {
+            console.log('anterior: ', anterior, ' | atual', atual, ' |indice', indice);
+            return anterior + atual + indice;
+        }, 10);
+        console.log(numeros);
+        console.log(somaDeArray);
+
+        var teste = ['1', '2', '3', '4', '5', '6', '7'].reduce( function (i, a) { return i+ a; });
+        console.log(teste);
+
+        console.log([10,20,30].reverse());
+
+        console.log(arr2.slice(2, 5))
+
+        console.log(arr2);
+        var arr3 = arr2.splice(2, 3, 'limao', 'melao')
+        console.log(arr3);
+        console.log(arr2);
+    </script>
+    
+</body>
+</html>

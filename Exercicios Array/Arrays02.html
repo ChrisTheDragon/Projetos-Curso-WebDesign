@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../beluga.js"></script>
+</head>
+<body>
+    <h1>Logica de Programação com Javascript</h1>
+    <div id="form">
+        <form action="#">
+            <label for="nota1">Nota 1: </label>
+            <input type="number" id="nota1"> <br>
+            <label for="nota2">Nota 2: </label>
+            <input type="number" id="nota2"> <br>
+            <label for="nota3">Nota 3: </label>
+            <input type="number" id="nota3"> <br>
+            <label for="nota4">Nota 4: </label>
+            <input type="number" id="nota4"> <br>
+            <button id="btn">Enviar</button>
+        </form>
+    </div>
+    <div id="result">
+        Resultado: 
+    </div>
+
+    <script>
+        var $nota1 = document.getElementById("nota1");
+        var $nota2 = document.getElementById("nota2");
+        var $nota3 = document.getElementById("nota3");
+        var $nota4 = document.getElementById("nota4");
+
+        btn.addEventListener("click", function(e) {
+            var n1 = parseFloat($nota1.value);
+            var n2 = parseFloat($nota2.value)
+            var n3 = parseFloat($nota3.value)
+            var n4 = parseFloat($nota4.value)
+
+            var media = calcularMedia(n1, n2, n3, n4);
+
+            console.log($nota1.value);
+            console.log($nota2.value);
+            console.log($nota3.value);
+            console.log($nota4.value);
+
+            console.log(media);
+        })
+        
+    </script>
+    
+</body>
+</html>
