@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-theme.css">
+    <style>
+        .destaque {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Curso de JavaScript</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, unde! Quisquam facilis cupiditate quod eligendi culpa quas excepturi error, incidunt praesentium quibusdam iusto repellendus explicabo minus accusantium possimus doloribus deserunt.</p>
+    <p>Lorem ipsum dolor JavaScript amet consectetur adipisicing elit. Porro ducimus beatae hic numquam accusantium dolorum, minima aliquam est laudantium. Accusamus, dolorem! Dolores in laboriosam earum possimus nostrum aperiam illo cumque.
+    Labore minima quisquam tempora laudantium, animi distinctio? Recusandae sunt reiciendis ullam saepe dignissimos nisi excepturi, error deleniti amet adipisci labore ex blanditiis qui voluptas eos fuga? Reiciendis in id voluptates.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet atque culpa, hic autem consectetur neque maxime veniam deleniti officia ex temporibus expedita provident ab! Doloribus, velit? Rerum sed dolorum suscipit?
+    Voluptas quo praesentium, ipsa consectetur perspiciatis maiores incidunt recusandae, magni distinctio veritatis beatae aliquam ipsum ullam fugiat natus eligendi repellat iste excepturi vitae. Sequi debitis architecto autem fuga odit?
+    Provident nisi asperiores cumque inventore eius praesentium officia sunt, dignissimos ratione voluptatum hic eum corrupti, id corporis vero, reiciendis dicta doloribus molestias! Sequi eveniet corporis at nam et quis rem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, exercitationem sit sapiente in nesciunt recusandae corrupti asperiores beatae, velit provident dolores nobis dolorum dignissimos facilis, tempora nam cum. Quia, expedita?
+    Placeat adipisci accusamus eius fugiat dolor distinctio ab incidunt, ratione quo exercitationem JavaScript repellendus tenetur rerum repellat iste magnam omnis sequi, provident porro facere. Delectus repellat modi tenetur nam quos.
+    Reprehenderit fuga vero iste veniam sit alias cum officia, facilis minus nemo. Molestiae, pariatur, ea quidem libero sapiente placeat dignissimos aperiam alias perferendis itaque beatae corrupti delectus natus, accusamus qui!
+    Illum esse, eligendi consectetur iusto quis ullam odit velit adipisci suscipit illo, reiciendis quas! Exercitationem molestias incidunt doloremque ullam quas molestiae officia beatae laboriosam dolore. Tenetur ipsum animi a natus!</p>
+    
+    <script>
+        var $p = document.querySelectorAll('p');
+
+        $p.forEach(element => {
+           var temJS = element.textContent.indexOf('JavaScript') >= 0;
+           element.className = temJS ? 'destaque' : '';
+        });
+
+    </script>
+    
+</body>
+</html>

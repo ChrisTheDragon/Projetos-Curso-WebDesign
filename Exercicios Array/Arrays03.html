@@ -95,9 +95,11 @@
                 var notas = recuperarNumerosDeColunas(tds);
 
                 
-                var temZero = notas.some (function(nota) {
+                /* var temZero = notas.some (function(nota) {
                     return nota === 0;
-                });
+                }); */
+
+                var temZero = notas.some ( nota => nota === 0 );
                 
                 var menssagem = temZero ? 'reprovado' : calcularMedia.apply(this, notas);
 
