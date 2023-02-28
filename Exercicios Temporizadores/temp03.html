@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #relogio {
+            width: 500px;
+            height: 100px;
+            background-image: linear-gradient(rgba(190, 244, 204, 0.868), transparent);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 90px;
+            text-align: center;
+            margin: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Relogio</h1>
+    <div id="relogio">XX:XX:XX</div>
+    
+    <script>
+        var $relogio = document.querySelector('#relogio');
+        
+        setInterval(function() {
+            var horario = new Date();
+            $relogio.innerHTML = horario.getHours() + ':' + horario.getMinutes() +':' + horario.getSeconds();
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temporizadores</h1>
+    <div></div>
+
+    <script>
+
+        var n = 0;
+
+        function somaUM() {
+            console.log('n:', ++n);
+
+            if (n >= 5) clearInterval(intervalo);
+        }
+
+        setTimeout(somaUM, 1000);
+
+        var intervalo = setInterval(somaUM, 1000);
+
+        /* console.log(intervalo); */
+
+        /* var str = '';
+        var d = document.querySelector('div');
+        var timeoutTeste = setTimeout(function() {
+            for (var i = 0; i < 100; i++) {
+                str += 'i: ' +i+'--'
+                d.textContent += str;
+            }
+        }, 3000) */
+    </script>
+</body>
+</html>
