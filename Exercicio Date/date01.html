@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-theme.css">
+    <style>
+        #container {
+            background-image: linear-gradient(rgba(88, 166, 244, 0.797), transparent);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #dias {
+            width: 200px;
+            height: 200px;
+            border: solid black;
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Curso de Java Script</h1>
+    <div id="container">
+        <div id="dias">
+            faltam XX dias
+        </div>
+    </div>
+
+    <script>
+        
+        (function() {
+            var dataAtual = new Date();
+            dataAtual.setHours(0);
+            dataAtual.setMinutes(0);
+            dataAtual.setSeconds(0);
+            dataAtual.setMilliseconds(0);
+            var anoAtual = dataAtual.getFullYear();
+            var dataNiver = new Date(anoAtual, 9, 29);
+
+            var dataAtualTS = dataAtual.getTime();
+            var dataNiverTS = dataNiver.getTime();
+
+            if (dataNiverTS === dataAtualTS) {
+                alert('Parabens pelo seu aniversario');
+                return
+            }
+            if (dataNiverTS < dataAtualTS) {
+                dataNiver.setFullYear(++anoAtual);
+                dataNiverTS = dataNiver.getTime();
+            }
+
+            const UM_DIA_TS = 24 * 60 * 60 * 1000;
+            var diferença = dataNiverTS - dataAtualTS;
+
+            var $dia = document.querySelector('#dias');
+            $dia.innerHTML = 'faltam '+(diferença / UM_DIA_TS)+' dias';
+
+        }) ();
+
+    </script>
+</body>
+</html>
