@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript completo</h1>
+
+    <div class="teste" style="background: green;">apenas uma div de teste</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus quisquam quae pariatur autem repellat mollitia! Consequatur sunt distinctio eum inventore! Laudantium natus beatae atque ullam enim assumenda, doloribus sed?</p>
+
+    <div class="teste2">teste 2</div>
+
+    <script>
+        var $teste = document.querySelector('.teste');
+        console.log($teste.style);
+        console.log('computado: ', getComputedStyle($teste).background);
+
+        var $p = document.querySelector('p');
+        console.log($p.offsetHeight, $p.offsetWidth);
+        console.log($p.offsetLeft, $p.offsetTop);
+
+        var $teste2 = document.querySelector('.teste2');
+        console.log($teste2.offsetLeft, $teste2.offsetTop);
+        console.log($teste2.getBoundingClientRect());
+
+    </script>
+    
+</body>
+</html>
