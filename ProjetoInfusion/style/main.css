@@ -27,6 +27,9 @@ img {
     position: fixed;
     width: 100%;
 }
+.js .header__nav {
+    transition: max-height 1s;
+}
 
 .logo-text {
     text-transform: uppercase;
@@ -69,7 +72,11 @@ img {
     color: #63c6ae;
 }
 .header__btnMenu {
-
+    float: right;
+    margin: 1.5em;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
 }
 
 .hero {
@@ -118,8 +125,6 @@ img {
 
 .people-cards {
     margin-top: 2.5em;
-}
-.people-cards__card {
 }
 .people-cards__card:hover {
     outline: 5px solid #63c6ae;
